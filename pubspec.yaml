@@ -1,0 +1,30 @@
+name: moba
+description: Venera Private Dining — Flutter port of the Moba web app.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  # 6.3.2+ removes const FontWeight-keyed map (required for Dart 3.7+); works on Flutter 3.10+.
+  google_fonts: ^6.3.2
+  # SQLite database for `restaurant_package_booking` schema.
+  sqflite: ^2.3.3+1
+  # Cross-platform path utilities (used together with sqflite to locate the DB file).
+  path: ^1.9.0
+  # Lightweight key/value cache for session state (signed-in user, preferences).
+  shared_preferences: ^2.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
